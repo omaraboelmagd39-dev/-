@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>For Hanoud ✨</title>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;500;600;700&family=Playfair+Display:wght@400;500;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --gold: #e8c77b;
+    --gold-light: #fff1bd;
+    --dark: #07070b;
+    --dark2: #111017;
+    --text: #f8f5ed;
+}
+
+html,
+body {
+    width: 100%;
+    height: 100%;
+}
+
+body {
+    overflow: hidden;
+    background: var(--dark);
+    color: var(--text);
+    font-family: "Cairo", sans-serif;
+}
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+    position: fixed;
+    inset: 0;
+    z-index: 100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+
+    background:
+        radial-gradient(circle at center, #25202a 0%, #0d0b10 40%, #050508 100%);
+
+    transition:
+        opacity 1.2s ease,
+        visibility 1.2s ease;
+}
+
+.intro.hide {
+    opacity: 0;
+    visibility: hidden;
+    pointer-events: none;
+}
+
+.intro-content {
+    width: 90%;
+    max-width: 600px;
+    animation: introIn 1.5s ease;
+}
+
+.intro-small {
+    color: #aaa5a0;
+    font-size: 14px;
+    letter-spacing: 4px;
+    margin-bottom: 25px;
+}
+
+.intro-title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(50px, 10vw, 95px);
+    font-weight: 400;
+    color: white;
+    letter-spacing: 3px;
+}
+
+.intro-title span {
+    color: var(--gold);
+}
+
+.intro-line {
+    width: 70px;
+    height: 1px;
+    margin: 30px auto;
+    background: var(--gold);
+    box-shadow: 0 0 20px var(--gold);
+}
+
+.intro-text {
+    color: #bbb7b4;
+    font-size: 16px;
+    margin-bottom: 35px;
+}
+
+.enter {
+    border: 1px solid rgba(232,199,123,.5);
+    background: transparent;
+    color: var(--gold-light);
+    padding: 14px 38px;
+    border-radius: 100px;
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+    cursor: pointer;
+    transition: .4s;
+}
+
+.enter:hover {
+    background: var(--gold);
+    color: #111;
+    box-shadow: 0 0 35px rgba(232,199,123,.3);
+    transform: translateY(-3px);
+}
+
+@keyframes introIn {
+    from {
+        opacity: 0;
+        transform: translateY(35px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* =========================
+   MAIN
+========================= */
+
+.main {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    padding: 25px;
+
+    background:
+        radial-gradient(
+            circle at 50% 40%,
+            rgba(110,82,47,.22),
+            transparent 35%
+        ),
+        radial-gradient(
+            circle at 20% 80%,
+            rgba(91,59,100,.13),
+            transparent 30%
+        ),
+        linear-gradient(
+            135deg,
+            #07070b,
+            #111017,
+            #08080c
+        );
+}
+
+/* =========================
+   LIGHT
+========================= */
+
+.light {
+    position: absolute;
+    width: 500px;
+    height: 500px;
+    border-radius: 50%;
+
+    background: rgba(232,199,123,.04);
+
+    filter: blur(70px);
+
+    animation: lightMove 8s ease-in-out infinite alternate;
+}
+
+@keyframes lightMove {
+    from {
+        transform: translate(-120px,-60px);
+    }
+
+    to {
+        transform: translate(120px,60px);
+    }
+}
+
+/* =========================
+   CARD
+========================= */
+
+.card {
+    width: 100%;
+    max-width: 720px;
+    min-height: 560px;
+
+    position: relative;
+    z-index: 5;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 60px 35px;
+
+    border: 1px solid rgba(255,255,255,.1);
+    border-radius: 35px;
+
+    background:
+        linear-gradient(
+            145deg,
+            rgba(255,255,255,.075),
+            rgba(255,255,255,.025)
+        );
+
+    backdrop-filter: blur(25px);
+
+    box-shadow:
+        0 40px 100px rgba(0,0,0,.55),
+        inset 0 1px 0 rgba(255,255,255,.08);
+
+    animation: cardIn 1.4s ease;
+}
+
+@keyframes cardIn {
+    from {
+        opacity: 0;
+        transform: scale(.94) translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: scale(1) translateY(0);
+    }
+}
+
+/* =========================
+   TOP
+========================= */
+
+.overline {
+    color: #a8a29b;
+    font-size: 13px;
+    letter-spacing: 4px;
+    margin-bottom: 18px;
+}
+
+.title {
+    font-family: "Playfair Display", serif;
+    font-size: clamp(45px, 8vw, 75px);
+    font-weight: 400;
+
+    background:
+        linear-gradient(
+            100deg,
+            #fff,
+            var(--gold-light),
+            #fff,
+            var(--gold)
+        );
+
+    background-size: 300%;
+
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    animation: goldMove 6s linear infinite;
+}
+
+@keyframes goldMove {
+    from {
+        background-position: 0%;
+    }
+
+    to {
+        background-position: 300%;
+    }
+}
+
+.subtitle {
+    margin-top: 12px;
+    color: #bcb7b0;
+    font-size: 17px;
+}
+
+.divider {
+    width: 110px;
+    height: 1px;
+    margin: 30px auto;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            var(--gold),
+            transparent
+        );
+}
+
+/* =========================
+   MESSAGE
+========================= */
+
+.message {
+    max-width: 550px;
+
+    color: #ddd9d2;
+
+    font-size: 17px;
+    line-height: 2.2;
+
+    font-weight: 300;
+}
+
+.highlight {
+    color: var(--gold-light);
+    font-weight: 500;
+}
+
+/* =========================
+   BUTTON
+========================= */
+
+.secret-btn {
+    margin-top: 35px;
+
+    padding: 14px 32px;
+
+    border: 1px solid rgba(232,199,123,.45);
+    border-radius: 100px;
+
+    background: rgba(232,199,123,.04);
+
+    color: var(--gold-light);
+
+    font-family: "Cairo", sans-serif;
+    font-size: 15px;
+
+    cursor: pointer;
+
+    transition: .45s;
+}
+
+.secret-btn:hover {
+    background: var(--gold);
+    color: #111;
+    box-shadow:
+        0 0 25px rgba(232,199,123,.25),
+        0 10px 30px rgba(0,0,0,.25);
+
+    transform: translateY(-3px);
+}
+
+/* =========================
+   SECRET
+========================= */
+
+.secret {
+    max-height: 0;
+    overflow: hidden;
+    opacity: 0;
+
+    transition:
+        max-height 1s ease,
+        opacity 1s ease,
+        margin 1s ease;
+}
+
+.secret.show {
+    max-height: 300px;
+    opacity: 1;
+    margin-top: 30px;
+}
+
+.secret-text {
+    color: #eee9df;
+    line-height: 2;
+    font-size: 16px;
+}
+
+.secret-text strong {
+    color: var(--gold-light);
+}
+
+/* =========================
+   DECORATIONS
+========================= */
+
+.star {
+    position: absolute;
+    color: var(--gold-light);
+    opacity: .5;
+    font-size: 12px;
+
+    animation:
+        twinkle 3s ease-in-out infinite;
+}
+
+.star:nth-child(1) {
+    top: 12%;
+    left: 14%;
+}
+
+.star:nth-child(2) {
+    top: 20%;
+    right: 18%;
+    animation-delay: 1s;
+}
+
+.star:nth-child(3) {
+    bottom: 18%;
+    left: 20%;
+    animation-delay: 2s;
+}
+
+.star:nth-child(4) {
+    bottom: 13%;
+    right: 14%;
+    animation-delay: .5s;
+}
+
+@keyframes twinkle {
+    0%,100% {
+        opacity: .15;
+        transform: scale(.7);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(1.5);
+    }
+}
+
+.signature {
+    position: absolute;
+    bottom: 25px;
+
+    color: #69645f;
+    font-size: 11px;
+
+    letter-spacing: 2px;
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px) {
+
+    .card {
+        min-height: auto;
+        padding: 50px 22px;
+        border-radius: 28px;
+    }
+
+    .title {
+        font-size: 54px;
+    }
+
+    .message {
+        font-size: 15px;
+        line-height: 2;
+    }
+
+    .intro-title {
+        font-size: 58px;
+    }
+
+    .intro-small {
+        letter-spacing: 2px;
+    }
+
+    .signature {
+        bottom: 12px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- INTRO -->
+
+<section class="intro" id="intro">
+
+    <div class="intro-content">
+
+        <div class="intro-small">
+            A LITTLE SURPRISE
+        </div>
+
+        <h1 class="intro-title">
+            For <span>Hanoud</span>
+        </h1>
+
+        <div class="intro-line"></div>
+
+        <p class="intro-text">
+            في حاجة صغيرة معمولة مخصوص علشانك...
+        </p>
+
+        <button class="enter" onclick="enterSite()">
+            افتحي المفاجأة ✦
+        </button>
+
+    </div>
+
+</section>
+
+
+<!-- MAIN -->
+
+<main class="main">
+
+    <div class="light"></div>
+
+    <span class="star">✦</span>
+    <span class="star">✧</span>
+    <span class="star">✦</span>
+    <span class="star">✧</span>
+
+    <section class="card">
+
+        <div class="overline">
+            HAPPY BIRTHDAY
+        </div>
+
+        <h2 class="title">
+            هنود
+        </h2>
+
+        <p class="subtitle">
+           احلي خالتو ❤️
+        </p>
+
+        <div class="divider"></div>
+
+        <p class="message">
+            في ناس وجودهم في حياتنا بيخليها أجمل...
+            <br>
+
+            وإنتِ واحدة من الناس اللي
+            <span class="highlight">وجودهم له قيمة كبيرة.</span>
+
+            <br>
+
+            كل سنة وإنتِ بخير،
+            وكل سنة وضحكتك موجودة،
+            وربنا يجعل أيامك الجاية
+            أجمل وأهدى وأسعد.
+        </p>
+
+        <button class="secret-btn" onclick="showSecret()">
+            عندي كلمة أخيرة ليكي ✦
+        </button>
+
+        <div class="secret" id="secret">
+
+            <p class="secret-text">
+                يا <strong>هنود</strong> ❤️
+                <br><br>
+
+                أتمنى السنة دي تكون بداية
+                لكل حاجة حلوة نفسك فيها،
+                وربنا يفرح قلبك دايمًا
+                ويبعد عنك أي حاجة تضايقك.
+
+                <br><br>
+
+                <strong>
+                    كل سنة وإنتِ طيبة وبخير وسعادة 🎂
+                </strong>
+            </p>
+
+        </div>
+
+    </section>
+
+    <div class="signature">
+        MADE WITH LOVE • FOR HANoud
+    </div>
+
+</main>
+
+
+<script>
+
+function enterSite() {
+
+    document
+        .getElementById("intro")
+        .classList.add("hide");
+
+}
+
+function showSecret() {
+
+    document
+        .getElementById("secret")
+        .classList.toggle("show");
+
+}
+
+</script>
+
+</body>
+</html>
+```
+
+</body>
+</html>
